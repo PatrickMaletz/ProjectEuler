@@ -9,3 +9,21 @@ def solve01(problem_input):
             multiple_sum += x
 
     return multiple_sum
+
+def solve02(problem_input):
+    previous_sum = 1
+    next_sum = 0
+    sum = 1
+    total = 0
+    while sum < problem_input:
+        if MM.isEven(sum):
+            total += sum
+
+        next_sum = MM.nextFibonacci(sum,previous_sum)
+        previous_sum = sum
+        sum = next_sum
+
+    return total
+        
+
+
