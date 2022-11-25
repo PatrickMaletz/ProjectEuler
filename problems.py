@@ -27,8 +27,21 @@ def problem02():
 
     return Problem02
     
+def problem03():
 
+    problem_num = 3
+    problem_description = """
 
+    The prime factors of 13195 are 5, 7, 13 and 29.
+
+    What is the largest prime factor of the number 600851475143 ?
+
+    """
+    problem_input = 600851475143
+    
+    Problem02 = Problem(problem_num,problem_description, problem_input)
+
+    return Problem02
 
 
 
