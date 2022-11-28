@@ -16,14 +16,20 @@ def solve02(problem_input):
     sum = 1
     total = 0
     while sum < problem_input:
-        if MM.isEven(sum):
+        if MM.is_even(sum):
             total += sum
 
-        next_sum = MM.nextFibonacci(sum,previous_sum)
+        next_sum = MM.next_fibonacci(sum,previous_sum)
         previous_sum = sum
         sum = next_sum
 
     return total
-        
+
+def solve03(problem_input):
+    prime_factor_list = MM.prime_factors(problem_input)
+
+    return max(prime_factor_list)
+
+
 
 
