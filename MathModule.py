@@ -48,3 +48,17 @@ def prime_factors(num):
     
     return prime_list
 
+def is_palindrome(num):
+    num_str = str(num)
+    start = 0
+    end = len(num_str)
+
+    while start < len(num_str)/2:
+        if not (num_str[start] == num_str[end-1]):
+            return False
+        else:
+            start += 1
+            end -= 1
+            
+    return True
+

@@ -4,20 +4,22 @@ import solutions
 import problems
 
 def main():
-    solved_problems = 3
-    Problems = []
-    
-    Problem01 = problems.problem01()
-    Problem01.answer = solutions.solve01(Problem01.input)
-    
+    solve_all_problems = False
+    solve_problem_num = 3
 
-    Problem02 = problems.problem02()
-    Problem02.answer = solutions.solve02(Problem02.input)
+    all_problems = problems.init_problems()
+    all_solutions = solutions.init_solutions()
 
-    Problem03 = problems.problem03()
-    Problem03.answer = solutions.solve03(Problem03.input)
-    print(Problem03.answer)
-    print(MM.is_prime(Problem03.answer))
+
+    if solve_all_problems:
+        for count, problem in enumerate(all_problems):
+            all_problems[count].answer = all_solutions[count](problem.input)
+            print("Problem #",problem.number,"\n",problem.description)
+            print("The answer to problem ",problem.number," is: ", problem.answer)
+
+    print(MM.is_palindrome(10101))
+
+
 main()   
 
 

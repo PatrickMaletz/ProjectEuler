@@ -1,6 +1,13 @@
 from problemClass import Problem
 import MathModule as MM
 
+def init_solutions():
+    solutions = []
+    solutions.append(solve01)
+    solutions.append(solve02)
+    solutions.append(solve03)
+
+    return solutions
 
 def solve01(problem_input):
     multiple_sum = 0
