@@ -5,7 +5,7 @@ import problems
 
 def main():
     solve_all_problems = False
-    solve_problem_num = 3
+    solve_problem_num = 4
 
     all_problems = problems.init_problems()
     all_solutions = solutions.init_solutions()
@@ -13,12 +13,15 @@ def main():
 
     if solve_all_problems:
         for count, problem in enumerate(all_problems):
-            all_problems[count].answer = all_solutions[count](problem.input)
-            print("Problem #",problem.number,"\n",problem.description)
-            print("The answer to problem ",problem.number," is: ", problem.answer)
-
-    print(MM.is_palindrome(10101))
-
+            try:
+                all_problems[count].answer = all_solutions[count](problem.input)
+                print("Problem #",problem.number,"\n",problem.description)
+                print("The answer to problem ",problem.number," is: ", problem.answer)
+            except:
+                print("Problem #",problem.number,"\n",problem.description)
+                print("This problem has not been solved yet.")
+                
+    print(MM.factorise(60).sort())
 
 main()   
 

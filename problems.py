@@ -4,6 +4,9 @@ def init_problems():
     problems.append(problem01())
     problems.append(problem02())
     problems.append(problem03())
+    problems.append(problem04())
+    problems.append(problem05())
+    
     return problems
 
 def problem01():
@@ -57,6 +60,20 @@ def problem04():
     Find the largest palindrome made from the product of two 3-digit numbers.
     """
     problem_input = 3
+    
+    Problem04 = Problem(problem_num,problem_description, problem_input)
+
+    return Problem04
+
+def problem05():
+
+    problem_num = 5
+    problem_description = """
+    2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+
+    What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+    """
+    problem_input = 20
     
     Problem04 = Problem(problem_num,problem_description, problem_input)
 
