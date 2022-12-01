@@ -18,7 +18,7 @@ def is_even(num):
 
 def factorise(num: int):
     #Returns a list of factors for a given input integer
-    x = 1
+    x = 2
     factors = []
     while x <= num**0.5:
         if num%x == 0:
@@ -33,10 +33,10 @@ def is_prime(num):
     #Returns True if an inpout number is prime
     factors = factorise(num)
     
-    if len(factors) == 2:
-        return True
-    else:
+    if not (len(factors) == 0) or num == 1:
         return False
+    else:
+        return True
 
 def prime_factors(num):
     #Returns a list of all the prime factors of a given number
@@ -49,6 +49,7 @@ def prime_factors(num):
     return prime_list
 
 def is_palindrome(num):
+    #Checks if number is palindrome (reads same back to front)
     num_str = str(num)
     start = 0
     end = len(num_str)
@@ -61,4 +62,22 @@ def is_palindrome(num):
             end -= 1
             
     return True
+
+def prime_factors(num):
+    #Prime number factorisation
+    #Recursive
+    if is_prime(num):
+        return num
+    factors = factorise(num)
+    factors.sort()
+    factors = [factors[0],int(num/factors[0])]
+    prime_factor_list = []
+    for factor in factors:
+        if is_prime(factor):
+            prime_factor_list.append(factor)
+        else:
+            prime_factor_list += prime_factors(factor)
+
+
+    return prime_factor_list
 

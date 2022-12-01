@@ -21,7 +21,10 @@ def main():
                 print("Problem #",problem.number,"\n",problem.description)
                 print("This problem has not been solved yet.")
                 
-    print(MM.factorise(60).sort())
+    factors = MM.factorise(20)
+    factors.sort()
+    print(MM.prime_factors(746548))
+    print(2*2*11*19*19*47)
 
 main()   
 
