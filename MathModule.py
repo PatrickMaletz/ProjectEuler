@@ -63,21 +63,36 @@ def is_palindrome(num):
             
     return True
 
-def prime_factors(num):
+def prime_factor_decomposition(num):
     #Prime number factorisation
     #Recursive
     if is_prime(num):
-        return num
+        return [num]
     factors = factorise(num)
     factors.sort()
-    factors = [factors[0],int(num/factors[0])]
+    factors = [factors[0],factors[-1]]
     prime_factor_list = []
     for factor in factors:
         if is_prime(factor):
             prime_factor_list.append(factor)
         else:
-            prime_factor_list += prime_factors(factor)
+            prime_factor_list += prime_factor_decomposition(factor)
 
 
     return prime_factor_list
 
+def in_list(item,list):
+    #Returns a list of the positions where item is list
+    positions = []
+    for count,list_item in enumerate(list):
+        if item == list_item:
+            positions.append(count)
+    return positions
+
+def multiplyList(myList):
+    #Returns the product of all elements in a list
+    # Multiply elements one by one
+    result = 1
+    for x in myList:
+        result = result * x
+    return result

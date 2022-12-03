@@ -4,7 +4,7 @@ import solutions
 import problems
 
 def main():
-    solve_all_problems = False
+    solve_all_problems = True
     solve_problem_num = 4
 
     all_problems = problems.init_problems()
@@ -21,10 +21,11 @@ def main():
                 print("Problem #",problem.number,"\n",problem.description)
                 print("This problem has not been solved yet.")
                 
-    factors = MM.factorise(20)
-    factors.sort()
-    print(MM.prime_factors(746548))
-    print(2*2*11*19*19*47)
+
+    #print(solutions.solve05(10))
+    #print(MM.multiplyList(solutions.solve05(20)))
+
+
 
 main()   
 

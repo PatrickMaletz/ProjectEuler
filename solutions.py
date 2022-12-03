@@ -52,28 +52,19 @@ def solve04(problem_input):
     return
 
 def solve05(problem_input):
-    x = 1
-    while True:
-        factors = MM.factorise(x)
-        factors.sort()
-        for count, factor in enumerate(factors):
-            if factor == problem_input:
-                
-                return x
-            elif count+1 == len(factors):
-                
-                break               
-            elif not factors[count+1] == factor+1:
-                
-                break 
-
-        x += 1
-    
-
-
+    factor_list = []
+    for x in range(2,problem_input+1):
+        prime_factors = MM.prime_factor_decomposition(x)
+        for prime_factor in prime_factors:
             
+            quantity = prime_factors.count(prime_factor)
+            quantity_in_ist = len( MM.in_list(prime_factor,factor_list))
+            if  quantity_in_ist< quantity:
+                missing_factors = [prime_factor]*(quantity-quantity_in_ist)
+                factor_list += missing_factors
+                           
 
-    return
+    return MM.multiplyList(factor_list)
 
 
 
