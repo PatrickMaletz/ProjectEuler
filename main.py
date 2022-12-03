@@ -22,11 +22,6 @@ def main():
                 print("This problem has not been solved yet.")
                 
 
-    #print(solutions.solve05(10))
-    #print(MM.multiplyList(solutions.solve05(20)))
-
-
-
 main()   
 
 

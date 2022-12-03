@@ -6,7 +6,9 @@ def init_problems():
     problems.append(problem03())
     problems.append(problem04())
     problems.append(problem05())
-    
+    problems.append(problem06())
+    problems.append(problem07())
+
     return problems
 
 def problem01():
@@ -75,9 +77,40 @@ def problem05():
     """
     problem_input = 20
     
-    Problem04 = Problem(problem_num,problem_description, problem_input)
+    Problem05 = Problem(problem_num,problem_description, problem_input)
 
-    return Problem04
+    return Problem05
 
+def problem06():
+
+    problem_num = 6
+    problem_description = """
+    The sum of the squares of the first ten natural numbers is, 385
+
+    The square of the sum of the first ten natural numbers is, 3025
+
+    Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 2640.
+
+    Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
+    """
+    problem_input = 100
+    
+    Problem06 = Problem(problem_num,problem_description, problem_input)
+
+    return Problem06
+
+def problem07():
+
+    problem_num = 7
+    problem_description = """
+    By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+
+    What is the 10 001st prime number?
+    """
+    problem_input = 10001
+    
+    Problem07 = Problem(problem_num,problem_description, problem_input)
+
+    return Problem07
 
 

@@ -96,3 +96,26 @@ def multiplyList(myList):
     for x in myList:
         result = result * x
     return result
+
+def calc_square_sum(num_list):
+    #Returns the sum of all the numbers in a list squared.
+    square_sum = 0
+    for num in num_list:
+        square_sum += num**2
+    return square_sum
+
+def calc_sum_square(num_list):
+    #Returns the square of the sum of a list of numbers
+    return sum(num_list)**2
+
+def list_prime_numbers(n):
+    #Lists the first n prime numbers
+    prime_list = []
+    num = 1
+    while len(prime_list )< n:
+        if is_prime(num):
+            prime_list.append(num)
+
+        num += 1
+    
+    return prime_list

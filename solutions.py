@@ -8,6 +8,8 @@ def init_solutions():
     solutions.append(solve03)
     solutions.append(solve04)
     solutions.append(solve05)
+    solutions.append(solve06)
+    solutions.append(solve07)
 
     return solutions
 
@@ -52,6 +54,10 @@ def solve04(problem_input):
     return
 
 def solve05(problem_input):
+    """
+    The number that contains the all the numbers that are less than the input
+    must include every prime factor for each of the other numbers.
+    """
     factor_list = []
     for x in range(2,problem_input+1):
         prime_factors = MM.prime_factor_decomposition(x)
@@ -65,6 +71,14 @@ def solve05(problem_input):
                            
 
     return MM.multiplyList(factor_list)
+
+def solve06(problem_input):
+    numbers = range(1,problem_input+1)
+    return MM.calc_sum_square(numbers)-MM.calc_square_sum(numbers)
+
+def solve07(problem_input):
+    
+    return MM.list_prime_numbers(problem_input)[-1]
 
 
 
