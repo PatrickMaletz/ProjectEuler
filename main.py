@@ -1,7 +1,7 @@
 import problems
-
+import solutions
 def main():
-    solve_all_problems = True
+    solve_all_problems = False
     solve_problem_num = 4
 
     all_problems = problems.init_problems()
@@ -17,7 +17,9 @@ def main():
             except:
                 print("Problem #",problem.number,"\n",problem.description)
                 print("This problem has not been solved yet.")
-                
+    print(solutions.solve08(13))
+
+
 main()   
 
 
