@@ -1,13 +1,18 @@
+import solutions
 from problemClass import Problem
 def init_problems():
-    problems = []
-    problems.append(problem01())
-    problems.append(problem02())
-    problems.append(problem03())
-    problems.append(problem04())
-    problems.append(problem05())
-    problems.append(problem06())
-    problems.append(problem07())
+
+    problems = {1:problem01(),
+    2:problem02(),
+    3:problem03(),
+    4:problem04(),
+    5:problem05(),
+    6:problem06(),
+    7:problem07(),}
+
+    all_solutions = solutions.init_solutions()
+    for key in problems:
+        problems[key].solution = all_solutions[key]
 
     return problems
 

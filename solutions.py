@@ -1,15 +1,14 @@
-from problemClass import Problem
 import MathModule as MM
 
 def init_solutions():
-    solutions = []
-    solutions.append(solve01)
-    solutions.append(solve02)
-    solutions.append(solve03)
-    solutions.append(solve04)
-    solutions.append(solve05)
-    solutions.append(solve06)
-    solutions.append(solve07)
+
+    solutions = {1:solve01,
+    2:solve02,
+    3:solve03,
+    4:solve04,
+    5:solve05,
+    6:solve06,
+    7:solve07}
 
     return solutions
 
