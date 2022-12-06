@@ -119,3 +119,17 @@ def list_prime_numbers(n):
         num += 1
     
     return prime_list
+
+def sum_of_list(number_list):
+    sum = 0
+    for num in number_list:
+        sum += int(num)
+    
+    return sum
+
+def product_of_list(number_list):
+    sum = 1
+    for num in number_list:
+        sum = sum*int(num)
+    
+    return sum

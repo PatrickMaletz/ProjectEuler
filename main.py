@@ -17,7 +17,7 @@ def main():
             except:
                 print("Problem #",problem.number,"\n",problem.description)
                 print("This problem has not been solved yet.")
-    print(solutions.solve08(13))
+    print(solutions.solve08(4))
 
 
 main()   

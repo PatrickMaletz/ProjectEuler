@@ -101,9 +101,17 @@ def solve08(problem_input):
     giant_number +=  "84580156166097919133875499200524063689912560717606"
     giant_number +=  "05886116467109405077541002256983155200055935729725"
     giant_number +=  "71636269561882670428252483600823257530420752963450"
-    for count,letter in enumerate(giant_number):
-        print("Count: ",count,"Number: ", letter)
-    return len(giant_number)
+
+    n = problem_input
+    greatest_sum = 0
+    while n <len(giant_number):
+        sum = MM.product_of_list(giant_number[n-problem_input:n])
+        if sum > greatest_sum:
+            greatest_sum = sum
+
+        n += 1 
+    
+    return greatest_sum
 
 
 
