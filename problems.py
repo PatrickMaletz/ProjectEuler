@@ -29,8 +29,11 @@ def problem01():
     Find the sum of all the multiples of 3 or 5 below 1000."""
 
     problem_input = 1000
+
+    test_input = 10
+    test_answer = 23
     
-    Problem01 = Problem(problem_num,problem_description, problem_input)
+    Problem01 = Problem(problem_num,problem_description, problem_input,test_input,test_answer)
     return Problem01
 
 def problem02():
@@ -43,7 +46,8 @@ def problem02():
     By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
     """
     problem_input = 4_000_000
-    
+
+
     Problem02 = Problem(problem_num,problem_description, problem_input)
 
     return Problem02
@@ -57,10 +61,14 @@ def problem03():
     What is the largest prime factor of the number 600851475143 ?
     """
     problem_input = 600851475143
-    
-    Problem02 = Problem(problem_num,problem_description, problem_input)
 
-    return Problem02
+    test_input = 13195 
+    test_answer = 29
+    
+    
+    Problem03 = Problem(problem_num,problem_description, problem_input,test_input,test_answer)
+
+    return Problem03
     
 def problem04():
 
@@ -71,8 +79,11 @@ def problem04():
     Find the largest palindrome made from the product of two 3-digit numbers.
     """
     problem_input = 3
+
+    test_input = 2 
+    test_answer = 9009
     
-    Problem04 = Problem(problem_num,problem_description, problem_input)
+    Problem04 = Problem(problem_num,problem_description, problem_input,test_input,test_answer)
 
     return Problem04
 

@@ -8,7 +8,8 @@ def init_solutions():
     4:solve04,
     5:solve05,
     6:solve06,
-    7:solve07}
+    7:solve07,
+    8:solve08,}
 
     return solutions
 
