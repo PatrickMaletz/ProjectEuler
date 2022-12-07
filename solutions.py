@@ -42,13 +42,13 @@ def solve03(problem_input):
     return max(prime_factor_list)
 
 def solve04(problem_input):
-    maximum_number = (10**(problem_input)-1)**2-2
+    maximum_number = (10**(problem_input)-1)**2
     x = int(maximum_number)
     while x > 0:        
-        if MM.is_palindrome(x):            
+        if MM.is_palindrome(x):       
             x_factors = MM.factorise(x)            
             for factor in x_factors:
-                if (len(str(int(factor))) == 3) & (len(str(int(x/factor))) == 3):
+                if (len(str(int(factor))) == problem_input) & (len(str(int(x/factor))) == problem_input):
                     return x
         x -= 1
     return

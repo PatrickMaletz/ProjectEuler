@@ -11,8 +11,12 @@ class Problem:
     if self.test_input == None or self.test_answer == None:
       print("No test inputs given for problem number:", self.number)
       return False 
-    if self.test_answer == self.solution(self.test_input):
+
+    test_solution = self.solution(self.test_input)
+    print(test_solution)
+    if self.test_answer == test_solution:
       print("Test Passed.")
       return True
     else:
+      print("Test Failed. Correct answer:", self.test_answer, "Answer given:", test_solution)
       return False

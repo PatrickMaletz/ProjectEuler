@@ -47,8 +47,10 @@ def problem02():
     """
     problem_input = 4_000_000
 
+    test_input = 10
+    test_answer = 44
 
-    Problem02 = Problem(problem_num,problem_description, problem_input)
+    Problem02 = Problem(problem_num,problem_description, problem_input,test_input,test_answer)
 
     return Problem02
     
@@ -96,8 +98,10 @@ def problem05():
     What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
     """
     problem_input = 20
-    
-    Problem05 = Problem(problem_num,problem_description, problem_input)
+
+    test_input = 10 
+    test_answer = 2520    
+    Problem05 = Problem(problem_num,problem_description, problem_input,test_input,test_answer)
 
     return Problem05
 
@@ -114,8 +118,11 @@ def problem06():
     Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
     """
     problem_input = 100
+
+    test_input = 10
+    test_answer = 2640
     
-    Problem06 = Problem(problem_num,problem_description, problem_input)
+    Problem06 = Problem(problem_num,problem_description, problem_input,test_input,test_answer)
 
     return Problem06
 
@@ -128,10 +135,13 @@ def problem07():
     What is the 10 001st prime number?
     """
     problem_input = 10001
-    
-    Problem07 = Problem(problem_num,problem_description, problem_input)
 
-    return Problem07
+    test_input = 6
+    test_answer = 13
+    
+    problem = Problem(problem_num,problem_description, problem_input,test_input,test_answer)
+
+    return problem
 
 def problem08():
 
@@ -162,9 +172,13 @@ def problem08():
 
     Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
     """
+
     problem_input = 13
+    test_input = 4
+    test_answer = 5832
     
-    problem = Problem(problem_num,problem_description, problem_input)
+    problem = Problem(problem_num,problem_description, problem_input,test_input,test_answer)
+
 
     return problem
 
