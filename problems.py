@@ -47,7 +47,7 @@ def problem02():
     """
     problem_input = 4_000_000
 
-    test_input = 10
+    test_input = 90
     test_answer = 44
 
     Problem02 = Problem(problem_num,problem_description, problem_input,test_input,test_answer)
@@ -182,4 +182,25 @@ def problem08():
 
     return problem
 
+def problem08():
+
+    problem_num = 9
+    problem_description = """
+    A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,
+
+    a2 + b2 = c2
+    For example, 32 + 42 = 9 + 16 = 25 = 52.
+
+    There exists exactly one Pythagorean triplet for which a + b + c = 1000.
+    Find the product abc.
+    """
+
+    problem_input = 1000
+    test_input = 12
+    test_answer = 60
+    
+    problem = Problem(problem_num,problem_description, problem_input,test_input,test_answer)
+
+
+    return problem
 

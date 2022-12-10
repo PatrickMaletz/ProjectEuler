@@ -28,6 +28,7 @@ def solve02(problem_input):
     total = 0
     while sum < problem_input:
         if MM.is_even(sum):
+            print(sum)
             total += sum
 
         next_sum = MM.next_fibonacci(sum,previous_sum)
