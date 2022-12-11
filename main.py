@@ -25,6 +25,7 @@ def main():
                 print("Problem #",problem.number,"\n",problem.description)
                 print("This problem has not been solved yet.")
     
+    print(all_problems[10].solution(100000))
 
 main()   
 

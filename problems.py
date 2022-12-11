@@ -9,7 +9,9 @@ def init_problems():
     5:problem05(),
     6:problem06(),
     7:problem07(),
-    8:problem08()}
+    8:problem08(),
+    9:problem09(),
+    10:problem10()}
 
     all_solutions = solutions.init_solutions()
     for key in problems:
@@ -182,7 +184,47 @@ def problem08():
 
     return problem
 
-def problem08():
+def problem09():
+
+    problem_num = 9
+    problem_description = """
+    A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,
+
+    a2 + b2 = c2
+    For example, 32 + 42 = 9 + 16 = 25 = 52.
+
+    There exists exactly one Pythagorean triplet for which a + b + c = 1000.
+    Find the product abc.
+    """
+
+    problem_input = 1000
+    test_input = 12
+    test_answer = 60
+    
+    problem = Problem(problem_num,problem_description, problem_input,test_input,test_answer)
+
+
+    return problem
+
+def problem10():
+
+    problem_num = 10
+    problem_description = """
+    The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+
+    Find the sum of all the primes below two million.
+    """
+
+    problem_input = 2_000_000
+    test_input = 10
+    test_answer = 17
+    
+    problem = Problem(problem_num,problem_description, problem_input,test_input,test_answer)
+
+
+    return problem
+
+def problem09():
 
     problem_num = 9
     problem_description = """

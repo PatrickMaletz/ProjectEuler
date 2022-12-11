@@ -108,15 +108,24 @@ def calc_sum_square(num_list):
     #Returns the square of the sum of a list of numbers
     return sum(num_list)**2
 
-def list_prime_numbers(n):
-    #Lists the first n prime numbers
+def list_prime_numbers(n, use_number = True):
+    #Lists prime numbers
+    #If use_number = True -> returns the first n prime numbers.
+    #If use_number = False -> returns all the prime numbers below
     prime_list = []
     num = 1
-    while len(prime_list )< n:
-        if is_prime(num):
-            prime_list.append(num)
+    if use_number:
+        while len(prime_list )< n:
+            if is_prime(num):
+                prime_list.append(num)
 
-        num += 1
+            num += 1
+    else:
+        while num < n:
+            if is_prime(num):
+                prime_list.append(num)
+
+            num += 1
     
     return prime_list
 
@@ -133,3 +142,14 @@ def product_of_list(number_list):
         sum = sum*int(num)
     
     return sum
+
+def make_pythag_triplet(m,n):
+    #Returns a pythagorean triplet using Euclid's formula.
+    if n > m:
+        return
+    
+    a = m**2-n**2
+    b = 2*m*n
+    c = m**2+n**2
+
+    return a,b,c

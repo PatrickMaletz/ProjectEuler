@@ -9,7 +9,9 @@ def init_solutions():
     5:solve05,
     6:solve06,
     7:solve07,
-    8:solve08,}
+    8:solve08,
+    9:solve09,
+    10:solve10,}
 
     return solutions
 
@@ -115,5 +117,24 @@ def solve08(problem_input):
     
     return greatest_sum
 
+
+
+def solve09(problem_input):
+    #Uses Euclid's formula for generating pythagorean triplets.
+    m = 2
+    
+    while m < problem_input:
+
+        n = (problem_input-(2*m**2))/(2*m)
+        if (m > n) and n.is_integer() and n > 0:
+            triplet = MM.make_pythag_triplet(m,n)
+            return MM.product_of_list(triplet)
+        m+= 1
+
+    return None
+
+def solve10(problem_input):
+    
+    return sum(MM.list_prime_numbers(problem_input,False))
 
 
