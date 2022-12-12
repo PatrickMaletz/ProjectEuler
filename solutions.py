@@ -135,6 +135,6 @@ def solve09(problem_input):
 
 def solve10(problem_input):
     
-    return sum(MM.list_prime_numbers(problem_input,False))
+    return sum(MM.prime_sieve(problem_input)-1)
 
 

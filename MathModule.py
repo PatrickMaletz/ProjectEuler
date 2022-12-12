@@ -129,6 +129,28 @@ def list_prime_numbers(n, use_number = True):
     
     return prime_list
 
+def prime_sieve(n):
+    #Lists all the prime numbers up to n
+    # Uses Sieve of Eratosthenes
+    prime_list = []
+    prime_bools = [True]*(n)
+    i = 2
+    while i < n**0.5:
+        if prime_bools[i]:
+            j = i**2
+            while j < (n):
+                prime_bools[j] = False
+                j += i
+        i += 1
+    k = 0
+    for prime_bool in prime_bools:
+        if prime_bool:
+            prime_list.append(k)
+        k += 1
+                    
+
+    return prime_list
+
 def sum_of_list(number_list):
     sum = 0
     for num in number_list:

@@ -1,5 +1,6 @@
 import problems
 import solutions
+import MathModule as MM
 def main():
     solve_all_problems = False
     solve_problem_num = 4
@@ -25,8 +26,8 @@ def main():
                 print("Problem #",problem.number,"\n",problem.description)
                 print("This problem has not been solved yet.")
     
-    print(all_problems[10].solution(100000))
-
+    #print(all_problems[10].solution(100000))
+    print((MM.list_prime_numbers_sieve(30)))
 main()   
 
 
