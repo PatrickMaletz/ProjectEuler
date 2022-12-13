@@ -175,3 +175,19 @@ def make_pythag_triplet(m,n):
     c = m**2+n**2
 
     return a,b,c
+
+def scan_array(array, scan_size, direction, start_point):
+    #Returns a list of numbers that are in a linear scan of a 2D grid array given a scan length, direction and starting point.
+    count = 0
+    scan = []
+    while count < scan_size:
+        row = start_point[0]+count*direction[0]
+        column = start_point[1]+count*direction[1]
+        
+        scan.append(array[row][column])
+
+        count += 1
+    
+    return scan
+
+

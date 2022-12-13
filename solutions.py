@@ -11,7 +11,8 @@ def init_solutions():
     7:solve07,
     8:solve08,
     9:solve09,
-    10:solve10,}
+    10:solve10,
+    11:solve11}
 
     return solutions
 
@@ -136,5 +137,27 @@ def solve09(problem_input):
 def solve10(problem_input):
     
     return sum(MM.prime_sieve(problem_input)-1)
+
+def solve11(problem_input):
+    scan_size = 4
+    grid = problem_input
+    biggest_scan_product = 0
+    scans = []
+    for row in range(len(grid)):
+        scan_up = row+1 >= scan_size
+        scan_down =  row <= (len(grid)-scan_size)
+    
+        for column in range(len(grid[row])):
+
+            scan_left = column+1 >= scan_size
+            scan_right = column <= (len(row)-scan_size)
+            if scan_up:
+                scan_direction = [-1,0]
+                scan_result = MM.scan_array(grid,scan_size,scan_direction,[row,column])
+                scans.append(MM.product_of_list())   
+           
+            #print(grid[row][column])
+
+    return biggest_scan_product
 
 

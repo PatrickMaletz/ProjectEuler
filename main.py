@@ -1,6 +1,7 @@
 import problems
 import solutions
 import MathModule as MM
+import utilityModule as UM
 def main():
     solve_all_problems = False
     solve_problem_num = 4
@@ -26,8 +27,17 @@ def main():
                 print("Problem #",problem.number,"\n",problem.description)
                 print("This problem has not been solved yet.")
     
-    #print(all_problems[10].solution(100000))
-    print((MM.list_prime_numbers_sieve(30)))
+    current_problem_number = 11
+    current_problem = all_problems[current_problem_number] 
+    #print(current_problem.solution(current_problem.input))
+    array = [[1,2,3],[4,5,6],[7,8,9]]
+    print(MM.scan_array(array,2,[0,1],[1,0]))
+    
+    #print((MM.list_prime_numbers_sieve(30)))
+
+   
+    #print(UM.csv_to_matrix('problem_data/problem_11.csv',' ')[2][4])
+
 main()   
 
 
