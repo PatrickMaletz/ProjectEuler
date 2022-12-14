@@ -1,5 +1,5 @@
 import MathModule as MM
-
+import utilityModule
 def init_solutions():
 
     solutions = {1:solve01,
@@ -12,7 +12,9 @@ def init_solutions():
     8:solve08,
     9:solve09,
     10:solve10,
-    11:solve11}
+    11:solve11,
+    12:solve12,
+    13:solve13}
 
     return solutions
 
@@ -143,21 +145,48 @@ def solve11(problem_input):
     grid = problem_input
     biggest_scan_product = 0
     scans = []
+    scan_up, scan_down, scan_left, scan_right = False, False, False, False
+    directions = [[-1,0],[1,0],[0,-1],[0,1],[-1,-1],[-1,1],[1,-1],[1,1]] #[Up, down, left, right, up-left, up-right, down-left, down-right]
     for row in range(len(grid)):
         scan_up = row+1 >= scan_size
         scan_down =  row <= (len(grid)-scan_size)
-    
         for column in range(len(grid[row])):
 
             scan_left = column+1 >= scan_size
-            scan_right = column <= (len(row)-scan_size)
-            if scan_up:
-                scan_direction = [-1,0]
-                scan_result = MM.scan_array(grid,scan_size,scan_direction,[row,column])
-                scans.append(MM.product_of_list())   
-           
-            #print(grid[row][column])
+            scan_right = column <= (len(grid[row])-scan_size)
+            direction_bools = [scan_up, scan_down, scan_left, scan_right, scan_up and scan_left, scan_up and scan_right, scan_down and scan_left, scan_down and scan_right]
 
+            for direction, direction_bool in zip(directions,direction_bools):
+               
+                if direction_bool:
+                    scan_product = MM.product_of_list(MM.scan_array(grid,scan_size,direction,[row,column])) 
+                    scans.append(scan_product)
+            
+    biggest_scan_product = max(scans)    
     return biggest_scan_product
 
 
+def solve12(problem_input):
+    factors = 0
+    count = 1
+    triangle_number = 0
+    while factors < problem_input:
+        triangle_number +=count
+        count += 1
+        factors = len(MM.factorise(triangle_number))+2
+        print(triangle_number, " ", factors)
+
+        
+
+    return triangle_number
+
+def solve13(problem_input):
+
+    num_sum = 0
+    numbers = utilityModule.csv_to_matrix('problem_data/problem_13.csv',' ')
+    additional_accuracy = len(str(len(numbers)*10))
+    for count in range(len(numbers)):
+        num_string = str(numbers[count][0])[0:problem_input+additional_accuracy]
+        num_sum += int(num_string)
+        
+    return str(num_sum)[:problem_input]
