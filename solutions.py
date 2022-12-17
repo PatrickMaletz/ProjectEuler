@@ -14,7 +14,8 @@ def init_solutions():
     10:solve10,
     11:solve11,
     12:solve12,
-    13:solve13}
+    13:solve13,
+    14:solve14}
 
     return solutions
 
@@ -190,3 +191,15 @@ def solve13(problem_input):
         num_sum += int(num_string)
         
     return str(num_sum)[:problem_input]
+
+def solve14(problem_input): 
+    max_num: int = 0
+    max_size: int = 0
+    for count in range(1,problem_input):
+        
+        collatz_length = len(MM.collatz_sequence(count))-1
+        if collatz_length > max_size:
+            max_size = collatz_length
+            max_num = count
+
+    return max_num

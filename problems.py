@@ -15,7 +15,8 @@ def init_problems():
     10:problem10(),
     11:problem11(),
     12:problem12(),
-    13:problem13()}
+    13:problem13(),
+    14:problem14()}
 
     all_solutions = solutions.init_solutions()
     for key in problems:
@@ -410,6 +411,35 @@ def problem13():
     problem_input = 10
     test_input = None
     test_answer = None
+    
+    problem = Problem(problem_num,problem_description, problem_input,test_input,test_answer)
+
+
+    return problem
+
+
+def problem14():
+
+    problem_num = 14
+    problem_description = """
+    The following iterative sequence is defined for the set of positive integers:
+
+    n → n/2 (n is even)
+    n → 3n + 1 (n is odd)
+
+    Using the rule above and starting with 13, we generate the following sequence:
+
+    13 → 40 → 20 → 10 → 5 → 16 → 8 → 4 → 2 → 1
+    It can be seen that this sequence (starting at 13 and finishing at 1) contains 10 terms. Although it has not been proved yet (Collatz Problem), it is thought that all starting numbers finish at 1.
+
+    Which starting number, under one million, produces the longest chain?
+
+    NOTE: Once the chain starts the terms are allowed to go above one million.
+    """
+
+    problem_input = 1_000_000
+    test_input = 1000
+    test_answer = 871
     
     problem = Problem(problem_num,problem_description, problem_input,test_input,test_answer)
 

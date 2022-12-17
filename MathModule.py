@@ -190,4 +190,20 @@ def scan_array(array, scan_size, direction, start_point):
     
     return scan
 
+def next_collatz_number(number: int) -> int:
+    
+    if is_even(number):
+        return int(number/2)
 
+    else:
+       return int(number*3+1)
+
+def collatz_sequence(number: int):
+    next_number = number
+    collatz_numbers: list(int) = [number]
+
+    while next_number != 1:
+         next_number = next_collatz_number(next_number)
+         collatz_numbers.append(next_number)
+
+    return collatz_numbers

@@ -27,11 +27,11 @@ def main():
                 print("Problem #",problem.number,"\n",problem.description)
                 print("This problem has not been solved yet.")
     
-    current_problem_number = 13
+    current_problem_number = 14
     current_problem = all_problems[current_problem_number] 
-    print(current_problem.solution(10))
+    print(current_problem.solution(1_000_000))
     #array = [[1,2,3],[4,5,6],[7,8,9]]
-    #print(MM.scan_array(array,2,[0,1],[1,0]))
+    #print(MM.collatz_sequence(13))
     
     #print((MM.list_prime_numbers_sieve(30)))
 
