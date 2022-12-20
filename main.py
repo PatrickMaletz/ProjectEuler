@@ -1,5 +1,4 @@
 import problems
-import solutions
 import MathModule as MM
 import utilityModule as UM
 def main():
@@ -37,8 +36,8 @@ def main():
 
    
     #print(UM.csv_to_matrix('problem_data/problem_11.csv',' ')[2][4])
-
-main()   
+if __name__ == '__main__':
+    main()   
 
 
 

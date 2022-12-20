@@ -16,7 +16,8 @@ def init_problems():
     11:problem11(),
     12:problem12(),
     13:problem13(),
-    14:problem14()}
+    14:problem14(),
+    15:problem15()}
 
     all_solutions = solutions.init_solutions()
     for key in problems:
@@ -440,6 +441,24 @@ def problem14():
     problem_input = 1_000_000
     test_input = 1000
     test_answer = 871
+    
+    problem = Problem(problem_num,problem_description, problem_input,test_input,test_answer)
+
+
+    return problem
+
+def problem15():
+
+    problem_num = 15
+    problem_description = """
+    Starting in the top left corner of a 2×2 grid, and only being able to move to the right and down, there are exactly 6 routes to the bottom right corner.
+
+
+    How many such routes are there through a 20×20 grid?"""
+
+    problem_input = 20
+    test_input = 2
+    test_answer = 6
     
     problem = Problem(problem_num,problem_description, problem_input,test_input,test_answer)
 
