@@ -26,9 +26,9 @@ def main():
                 print("Problem #",problem.number,"\n",problem.description)
                 print("This problem has not been solved yet.")
     
-    current_problem_number = 14
+    current_problem_number = 15
     current_problem = all_problems[current_problem_number] 
-    print(current_problem.solution(1_000_000))
+    print(current_problem.solution(12))
     #array = [[1,2,3],[4,5,6],[7,8,9]]
     #print(MM.collatz_sequence(13))
     

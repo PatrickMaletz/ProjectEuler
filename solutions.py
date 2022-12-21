@@ -15,7 +15,8 @@ def init_solutions():
     11:solve11,
     12:solve12,
     13:solve13,
-    14:solve14}
+    14:solve14,
+    15:solve15}
 
     return solutions
 
@@ -203,3 +204,12 @@ def solve14(problem_input):
             max_num = count
 
     return max_num
+
+
+def solve15(problem_input): 
+    start = [0,0]
+    root = utilityModule.node(data = start)
+
+
+
+    return MM.goto_grid_corner(problem_input,root,0)

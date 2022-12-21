@@ -12,3 +12,21 @@ def csv_to_matrix(filename, delimiter):
     return csv_list
 
     
+class node():
+
+    def __init__(self, left = None, right = None, data = None) -> None:
+        super().__init__()
+        self.left = left
+        self.right = right
+        self.data = data
+    
+    def add(self,node, left):
+        if left:
+            self.left = node
+        else:
+            self.right = node
+        return
+
+
+
+     

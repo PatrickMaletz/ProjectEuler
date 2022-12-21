@@ -1,3 +1,4 @@
+import utilityModule
 
 
 def multiple_of_n(input_num,n):
@@ -207,3 +208,28 @@ def collatz_sequence(number: int):
          collatz_numbers.append(next_number)
 
     return collatz_numbers
+
+
+def goto_grid_corner(n, node, count):
+    #print(node.data)
+    #Find the corner of a grid using a binary tree
+    if node.data[0] == n or node.data[1] == n:
+
+        #print(node.data, "Woppedywoop")
+        count += 1
+        return count
+
+
+    left_node = utilityModule.node(data = [node.data[0]+1,node.data[1]])
+    node.left = left_node 
+
+   
+    right_node = utilityModule.node(data = [node.data[0],node.data[1]+1])
+    node.right = right_node
+    
+    count = goto_grid_corner(n,node.left, count)
+    count = goto_grid_corner(n,node.right, count)
+
+       
+    return count
+        
