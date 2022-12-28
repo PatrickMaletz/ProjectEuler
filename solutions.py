@@ -205,7 +205,7 @@ def solve14(problem_input):
 
     return max_num
 
-
+"""
 def solve15(problem_input): 
     start = [0,0]
     root = utilityModule.node(data = start)
@@ -213,3 +213,25 @@ def solve15(problem_input):
 
 
     return MM.goto_grid_corner(problem_input,root,0)
+
+"""
+
+def solve15(problem_input):
+    n = (problem_input*2)
+    count = int(2**(n/2)-1)
+    end = 2**n-1
+    routes = 0
+    i = 2**10-1
+    b = bin(i)
+    s = str(b)
+    s2 = s[2:]
+    print(count)
+    print(end)
+    while(count<end):
+
+        binary_num = str(bin(count))[2:]
+        if MM.sum_of_list(binary_num) == n/2:
+            routes += 1
+        count +=1
+
+    return routes
